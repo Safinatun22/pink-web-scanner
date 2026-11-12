@@ -426,7 +426,7 @@ if selected_menu == t["nav_overview"]:
     if history_items:
         df_hist = pd.DataFrame(history_items)[["timestamp", "domain", "status_code", "seo_score", "security_coverage", "response_time", "scan_id"]]
         df_hist.columns = ["Waktu", "Domain Target", "HTTP Status", "SEO Score", "Security %", "Latency (s)", "Scan ID"]
-        st.dataframe(df_hist, use_container_width=True)
+        st.dataframe(df_hist, )
     else:
         st.info("Riwayat pemindaian masih kosong. Jalankan scan pertama Anda!")
     st.markdown('</div>', unsafe_allow_html=True)
